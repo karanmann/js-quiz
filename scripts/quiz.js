@@ -10,6 +10,7 @@ let currentQuestions = {};
 let acceptingAnswer = true;
 let score = 0;
 let questionCounter = 0;
+let availableQuesions = [];
 
 // DUMMY QUESTIONS ARRAY
 let questions = [
@@ -54,6 +55,7 @@ startQuiz = () => {
 
 getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
+    localStorage.setItem("mostRecentScore", score);
     return window.location.assign("../pages/end.html")  // Send to end page
   }
   //Adds +1 to current question
@@ -100,7 +102,7 @@ choices.forEach(choice => {
       incrementScore(correct_Bonus);
     }
 
-    selectedChoice.parentElement.classList.add(classToApply); //Corectness Class applied here
+    selectedChoice.parentElement.classList.add(classToApply); //Correctness Class applied here
 
 
     // Function which changes the question 1 second after the question is answer. 
