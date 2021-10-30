@@ -1,6 +1,10 @@
-//API-
-const API_URL =
-  "https://opentdb.com/api.php?amount=10&category=28&difficulty=easy&type=multiple";
+//API'S
+
+// GEOGRAPHY
+const API_URL = "https://opentdb.com/api.php?amount=10&category=22&difficulty=easy&type=multiple"
+
+//AUTOMOBILES
+// const API_URL = "https://opentdb.com/api.php?amount=10&category=28&difficulty=easy&type=multiple";
 
 //DOM
 const question = document.getElementById("question");
@@ -8,6 +12,8 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
+const loader = document.getElementById("loader");
+const game = document.getElementById("game");
 
 //INITIAL VARIABLES
 let currentQuestions = {};
@@ -41,6 +47,7 @@ fetch(API_URL)
 
       return formattedQuestion;
     });
+    
     startQuiz();
   })
   .catch((error) => console.error(error));
@@ -55,6 +62,8 @@ startQuiz = () => {
   score = 0;
   availableQuestions = [...questions]; //Spread the questions array in the availableQuestions Array
   getNewQuestion();
+  game.classList.remove("hidden");
+  loader.classList.add("hidden");
 };
 
 getNewQuestion = () => {
