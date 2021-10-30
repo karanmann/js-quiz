@@ -1,19 +1,17 @@
 //DOM
-
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-const questionCounterText = document.getElementById("questionCounter");
+const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
+const progressBarFull = document.getElementById("progressBarFull");
 
 //VARIABLES
-
 let currentQuestions = {};
 let acceptingAnswer = true;
 let score = 0;
 let questionCounter = 0;
 
 // DUMMY QUESTIONS ARRAY
-
 let questions = [
   {
     question: "Inside which HTML element do we put the JavaScript??",
@@ -59,8 +57,10 @@ getNewQuestion = () => {
     return window.location.assign("../pages/end.html")  // Send to end page
   }
   questionCounter++; //Adds +1 to current question
-  questionCounterText.innerHTML = `${questionCounter} / ${max_Questions}`
-
+  progressText.innerHTML = `Question: ${questionCounter} / ${max_Questions}`
+  // Update Progress Bar
+  progressBarFull.style.width = `${(questionCounter / max_Questions) * 100}%`
+  
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
