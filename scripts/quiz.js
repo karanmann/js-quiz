@@ -1,3 +1,7 @@
+//API-
+const API_URL =
+  "https://opentdb.com/api.php?amount=10&category=28&difficulty=easy&type=multiple";
+
 //DOM
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
@@ -10,16 +14,33 @@ let currentQuestions = {};
 let acceptingAnswer = true;
 let score = 0;
 let questionCounter = 0;
-let availableQuesions = [];
+let availableQuestions = [];
 
-// DUMMY QUESTIONS ARRAY
+// FETCHED QUESTIONS ARRAY
 let questions = [];
 
-fetch("../dummy-data/questions.json")
+// fetch("../dummy-data/questions.json")
+fetch(API_URL)
   .then((response) => response.json())
   .then((loadedQuestions) => {
-    //console.log(loadedQuestions);
-    questions = loadedQuestions;
+    // console.log(loadedQuestions.results);
+    // questions = loadedQuestions;
+    
+    questions = loadedQuestions.results.map(loadedQuestion => {
+      const formattedQuestion = {
+        question: loadedQuestion.question,
+      };
+
+      const answerChoices = [...loadedQuestion.incorrect_answers];
+      formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
+      answerChoices.splice( formattedQuestion.answer - 1, 0, loadedQuestion.correct_answer );
+
+      answerChoices.forEach((choice, index) => {
+        formattedQuestion["choice" + (index + 1)] = choice;
+      });
+
+      return formattedQuestion;
+    });
     startQuiz();
   })
   .catch((error) => console.error(error));
@@ -27,7 +48,7 @@ fetch("../dummy-data/questions.json")
 //CONSTANTS
 
 const correct_Bonus = 10; //Point for ever correctly answered question
-const max_Questions = 3; //Max questions to ask in the quiz
+const max_Questions = 10; //Max questions to ask in the quiz
 
 startQuiz = () => {
   questionCounter = 0;
