@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 .choice-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5,14 +6,14 @@
   margin-bottom: 0.5rem;
   width: 100%;
   font-size: 1.8rem;
-  border: 0.1rem solid rgba(86, 165, 235, 0.25);
-  background-color: white;
+  border: 0.1rem solid rgba(8, 255, 8, 0.25);
+  border-radius: 2rem;
 }
 
 .choice-container:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-          box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  -webkit-box-shadow: 0 0.2rem 1rem 0 rgba(8, 255, 8, 0.5);
+          box-shadow: 0 0.2rem 1rem 0 rgba(8, 255, 8, 0.5);
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   -webkit-transition: -webkit-transform 150ms;
@@ -23,21 +24,25 @@
 
 .choice-prefix {
   padding: 1.5rem 2.5rem;
-  background-color: #56a5eb;
+  background-color: #333;
   color: white;
+  border: 0.1rem solid rgba(8, 255, 8, 0.25);
+  color: #08FF08;
+  border-radius: 2rem 0 0 2rem;
 }
 
 .choice-text {
   padding: 1.5rem;
   width: 100%;
+  text-align: center;
 }
 
 .correct {
-  background-color: #28a745;
+  background-color: #639c71;
 }
 
 .incorrect {
-  background-color: #dc3545;
+  background-color: #c96872;
 }
 
 /* HUD */
@@ -62,21 +67,21 @@
 #progressBar {
   width: 20rem;
   height: 4rem;
-  border: 0.3rem solid #56a5eb;
+  border: 0.3rem solid #08FF08;
   margin-top: 1.5rem;
 }
 
 #progressBarFull {
   height: 3.4rem;
-  background-color: #56a5eb;
+  background-color: #08FF08;
   width: 0%;
 }
 
 /* LOADER */
 #loader {
-  border: 1.6rem solid white;
+  border: 1.6rem solid #333;
   border-radius: 50%;
-  border-top: 1.6rem solid #56a5eb;
+  border-top: 1.6rem solid #08FF08;
   width: 12rem;
   height: 12rem;
   -webkit-animation: spin 2s linear infinite;
@@ -122,17 +127,18 @@
 }
 
 :root {
-  background-color: #ecf5ff;
   font-size: 62.5%;
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
 }
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'VT323', monospace;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #08FF08;
 }
 
 h1,
@@ -144,7 +150,6 @@ h4 {
 
 h1 {
   font-size: 5.4rem;
-  color: #56a5eb;
   margin-bottom: 5rem;
 }
 
@@ -221,27 +226,29 @@ h3 {
 
 /* BUTTONS */
 .btn {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   padding: 1rem 0;
   width: 20rem;
   text-align: center;
-  border: 0.1rem solid #56a5eb;
-  margin-bottom: 1rem;
+  border: 0.1rem solid #08FF08;
+  border-radius: 1.5rem;
+  margin-bottom: 2rem;
   text-decoration: none;
-  color: #56a5eb;
-  background-color: white;
+  background-color: #28313b;
 }
 
 .btn:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-          box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  -webkit-box-shadow: 0 0.7rem 1.4rem 0 rgba(8, 255, 8, 0.5);
+          box-shadow: 0 0.7rem 1.4rem 0 rgba(8, 255, 8, 0.5);
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   -webkit-transition: -webkit-transform 150ms;
   transition: -webkit-transform 150ms;
   transition: transform 150ms;
   transition: transform 150ms, -webkit-transform 150ms;
+  border: 0.2rem solid #08FF08;
+  background-color: #485461;
 }
 
 .btn[disabled]:hover {
@@ -268,28 +275,31 @@ form {
 }
 
 input {
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   width: 25rem;
   padding: 1.5rem;
   font-size: 1.8rem;
   border: none;
-  -webkit-box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-          box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  background-color: #28313b;
+  border-radius: 1rem;
+  border: 0.2rem solid #08FF08;
+  -webkit-box-shadow: 0 0.7rem 1.4rem 0 rgba(8, 255, 8, 0.5);
+          box-shadow: 0 0.7rem 1.4rem 0 rgba(8, 255, 8, 0.5);
 }
 
 input::-webkit-input-placeholder {
-  color: #aaa;
+  color: #08FF08;
 }
 
 input:-ms-input-placeholder {
-  color: #aaa;
+  color: #08FF08;
 }
 
 input::-ms-input-placeholder {
-  color: #aaa;
+  color: #08FF08;
 }
 
 input::placeholder {
-  color: #aaa;
+  color: #08FF08;
 }
 /*# sourceMappingURL=styles.css.map */

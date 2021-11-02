@@ -1,7 +1,7 @@
 //API'S
 
-// GEOGRAPHY
-const API_URL = "https://opentdb.com/api.php?amount=10&category=22&difficulty=easy&type=multiple"
+// GADGETS
+const API_URL = "https://opentdb.com/api.php?amount=10&category=30&type=multiple";
 
 //AUTOMOBILES
 // const API_URL = "https://opentdb.com/api.php?amount=10&category=28&difficulty=easy&type=multiple";
@@ -55,7 +55,7 @@ fetch(API_URL)
 //CONSTANTS
 
 const correct_Bonus = 10; //Point for ever correctly answered question
-const max_Questions = 10; //Max questions to ask in the quiz
+const max_Questions = 5; //Max questions to ask in the quiz
 
 startQuiz = () => {
   questionCounter = 0;

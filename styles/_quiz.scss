@@ -3,34 +3,38 @@
     margin-bottom: 0.5rem;
     width: 100%;
     font-size: 1.8rem;
-    border: 0.1rem solid rgba(86, 165, 235, 0.25);
-    background-color: white;
+    border: 0.1rem solid rgba(8,255,8, 0.25);
+    border-radius: 2rem;
   }
   
   .choice-container:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    box-shadow: 0 0.2rem 1rem 0 rgba(8,255,8, 0.5);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
   }
   
   .choice-prefix {
     padding: 1.5rem 2.5rem;
-    background-color: #56a5eb;
+    background-color: #333;
     color: white;
+    border: 0.1rem solid rgba(8,255,8, 0.25);
+    color: #08FF08;
+    border-radius: 2rem 0 0 2rem;
   }
   
   .choice-text {
     padding: 1.5rem;
-    width: 100%;
+    width: 100%; 
+    text-align: center;
   }
   
   .correct {
-    background-color: #28a745;
+    background-color: #639c71;
   }
   
   .incorrect {
-    background-color: #dc3545;
+    background-color: #c96872;
   }
   
   /* HUD */
@@ -53,21 +57,21 @@
   #progressBar {
     width: 20rem;
     height: 4rem;
-    border: 0.3rem solid #56a5eb;
+    border: 0.3rem solid #08FF08;
     margin-top: 1.5rem;
   }
   
   #progressBarFull {
     height: 3.4rem;
-    background-color: #56a5eb;
+    background-color: #08FF08;
     width: 0%;
   }
   
   /* LOADER */
   #loader {
-    border: 1.6rem solid white;
+    border: 1.6rem solid #333;
     border-radius: 50%;
-    border-top: 1.6rem solid #56a5eb;
+    border-top: 1.6rem solid #08FF08;
     width: 12rem;
     height: 12rem;
     animation: spin 2s linear infinite;
