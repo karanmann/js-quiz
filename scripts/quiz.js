@@ -1,10 +1,11 @@
 //API'S
 
 // GADGETS
-const API_URL = "https://opentdb.com/api.php?amount=10&category=30&type=multiple";
+// const API_URL = "https://opentdb.com/api.php?amount=10&category=30&type=multiple";
+// const API_URL = "https://opentdb.com/api.php?amount=10&category=15&difficulty=easy&type=multiple"
 
 //AUTOMOBILES
-// const API_URL = "https://opentdb.com/api.php?amount=10&category=28&difficulty=easy&type=multiple";
+const API_URL = "https://opentdb.com/api.php?amount=10&category=28&difficulty=easy&type=multiple";
 
 //DOM
 const question = document.getElementById("question");
@@ -12,6 +13,7 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
+
 const loader = document.getElementById("loader");
 const game = document.getElementById("game");
 
@@ -55,7 +57,7 @@ fetch(API_URL)
 //CONSTANTS
 
 const correct_Bonus = 10; //Point for ever correctly answered question
-const max_Questions = 5; //Max questions to ask in the quiz
+const max_Questions = 4; //Max questions to ask in the quiz
 
 startQuiz = () => {
   questionCounter = 0;
@@ -113,7 +115,7 @@ choices.forEach((choice) => {
 
     // If the answer is correct add to the bonus score.
     if (classToApply === "correct") {
-      incrementScore(correct_Bonus);
+      incrementScore(correct_Bonus); //Adds to the score
     }
 
     selectedChoice.parentElement.classList.add(classToApply); //Correctness Class applied here
