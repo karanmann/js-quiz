@@ -3,7 +3,6 @@ import {
   getFirestore,
   collection,
   addDoc,
-  doc,
   getDocs,
 } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js";
 
@@ -62,7 +61,7 @@ function clearContentOfElement(id) {
 }
 
 function formatListItem(item) {
-  return `<li>
+  return `<li class="reviews-card">
             <p>${item.review}</p> 
             <p>${item.name}</p>
             <p>${item.email}</p>
