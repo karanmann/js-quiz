@@ -1,11 +1,5 @@
-//API'S
-
-// GADGETS
-// const API_URL = "https://opentdb.com/api.php?amount=10&category=30&type=multiple";
-// const API_URL = "https://opentdb.com/api.php?amount=10&category=15&difficulty=easy&type=multiple"
-
-//AUTOMOBILES
-const API_URL = "https://opentdb.com/api.php?amount=10&category=28&difficulty=easy&type=multiple";
+//API
+const API_URL = "https://opentdb.com/api.php?amount=10&category=15&difficulty=easy&type=multiple"; 
 
 //DOM
 const question = document.getElementById("question");
@@ -16,6 +10,7 @@ const progressBarFull = document.getElementById("progressBarFull");
 
 const loader = document.getElementById("loader");
 const game = document.getElementById("game");
+const displayCorrectAnswer = document.getElementById("displayCorrectAnswer")
 
 //INITIAL VARIABLES
 let currentQuestions = {};
@@ -106,8 +101,8 @@ choices.forEach((choice) => {
     const selectedChoice = event.target;
     const selectedAnswer = selectedChoice.dataset["number"];
 
-    console.log(selectedAnswer);
-    console.log(selectedAnswer == currentQuestion.answer); //To check if the answer was correct
+    // console.log(selectedAnswer);
+    // console.log(selectedAnswer == currentQuestion.answer); //To check if the answer was correct
 
     // Ternanry Statement to apply the class depending on if the answer is correct or not.
     const classToApply =
@@ -116,7 +111,12 @@ choices.forEach((choice) => {
     // If the answer is correct add to the bonus score.
     if (classToApply === "correct") {
       incrementScore(correct_Bonus); //Adds to the score
-    }
+    } 
+    
+    //else if (classToApply === "incorrect") {
+    //   displayAnswer(currentQuestion.answer)
+    //   console.log(currentQuestion.answer)
+    // }
 
     selectedChoice.parentElement.classList.add(classToApply); //Correctness Class applied here
 
@@ -133,3 +133,7 @@ incrementScore = (num) => {
   score += num;
   scoreText.innerText = score;
 };
+
+// displayAnswer = (answer) => {
+//   displayCorrectAnswer.innerText = `<p>The correct answer is : ${answer}</p>>`
+// }
