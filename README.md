@@ -1,1 +1,1 @@
-# js-quiz
+# firebase-practice-quizapp
