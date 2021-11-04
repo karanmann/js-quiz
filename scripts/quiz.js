@@ -1,11 +1,5 @@
-//API'S
-
-// GADGETS
-// const API_URL = "https://opentdb.com/api.php?amount=10&category=30&type=multiple";
-// const API_URL = "https://opentdb.com/api.php?amount=10&category=15&difficulty=easy&type=multiple"
-
-//AUTOMOBILES
-const API_URL = "https://opentdb.com/api.php?amount=10&category=28&difficulty=easy&type=multiple";
+//API
+const API_URL = "https://opentdb.com/api.php?amount=10&category=15&difficulty=easy&type=multiple"; 
 
 //DOM
 const question = document.getElementById("question");
