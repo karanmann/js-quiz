@@ -4,20 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>Quiz App</title>
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
     <header></header>
     <main>
-      <div class="container">
-        <div id="home" class="flex-center flex-column">
-          <h1>DO YOU KNOW IT ALL ...</h1>
-          <a class="btn" href="./pages/quiz.html">LETS START</a>
-          <a class="btn" href="./pages/highScore.html">HIGH SCORE</a>
-          <a class="btn" href="./pages/reviews.html">REVIEWS</a>
-        </div>
+      <div id="box__planet">
+    
+        <img src="./assets/earth.png" alt="planet">
+        <div id=shadow_planet></div>
       </div>
+      <section class="questions__container">
+    
+        <img class="globe__quiz__image animate__animated animate__bounce"  src="/assets/brain_light.png">
+        
+        <h1 class="title__questions1">Try your knowledge </h1>
+        <h1 class="title__questions"> Good luck!</h1>
+        
+        
+        <form>
+          
+          <a class="animate__animated animate__fadeInLeft btn" href="./pages/quiz.html">LETS START</a>
+          <a class="animate__animated animate__fadeInRight btn" href="./pages/highScore.html">HIGH SCORE</a>
+          <a class="animate__animated animate__fadeInLeft btn" href="./pages/reviews.html">REVIEWS</a>
+          <a class="animate__animated animate__fadeInLeft btn" href="/indexT.html">Try your luck?</a>
+          
+      </form> 
+        
+      </section>
     </main>
     <footer></footer>
     <script src="./scripts/quiz.js"></script>

@@ -1,0 +1,144 @@
+animate__backInUp
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    display: flex;
+}
+
+.video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.Box {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 100%; */
+    position: absolute;
+    z-index: 1;
+    width: 30%;
+    background-color:transparent;
+    top: 50%;
+    left: 97%;
+    transform: translate(-100%,-50%)  
+}
+/* 
+.button .a{
+    text-decoration: none;
+} */
+  
+  /* .validation {
+    opacity: 0;
+    position: absolute;
+    right: -1.5em;
+    bottom: 1.5em;
+    transition: opacity 0.2s 0s cubic-bezier(.5, 0, .5, 1);
+    font-size: 0.5em;
+  } */
+  
+  input {
+    padding: 0px 0.5em;
+    margin-bottom: 25px;
+    border: none;
+    display: block;
+    margin-top: 15px;
+    height: 50px;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+ img {
+      /* display: block;
+      position: relative; */
+      width: 100%;
+      margin-bottom: 25px;
+
+  }
+
+  .btn {
+      height: 50px;
+      margin-top: 25px;
+      border-radius: 10px;
+      padding: 0.5em;
+      text-align: center;
+      text-decoration: none;
+      line-height: 50px;    
+      background-color: aliceblue;
+
+  }
+
+  .size {
+    width: 100%;
+    height: 50px;
+  }
+  @media screen and (max-width: 1000px) {
+    .Box {
+      width: 50%;
+      /* bottom: 0%; */
+      /*top: 100%;
+       left: 0%;
+      transform: translate(-100%,-100%)   */
+  
+      /* bottom: 10px;
+      left: 10px; */
+    }
+  }
+  
+
+  /* --------------------- */
+
+input {
+    /* Use transforms and / or opacity (most performance friendly)*/
+    transform: scale(1, 1) translate(0, 0);
+    transform-origin: center;
+    opacity: 1;
+  
+    /* These also work well to use (a little more performance demanding) */
+    box-shadow: 0px 0px 0px 0px rgba(95, 17, 232, 0.3);
+    color: rgba(95, 17, 232, 1);
+    background-color: rgba(255, 255, 255, 1);
+    
+    /* Avoid using width, height, min-height, min-width, padding, margin,
+       border-width, display etc that trigger a recalculation of the page layout */
+    
+    /* Animate with CSS transition, ex: */
+    transition:
+      opacity 0.2s 0s cubic-bezier(.5, 0, .5, 1),
+      transform 0.6s 0s cubic-bezier(.5, 0, .5, 1),
+      box-shadow 0.6s 0s cubic-bezier(.5, 0, .5, 1),
+      color 0.6s 0s cubic-bezier(.5, 0, .5, 1),
+      background-color 0.6s 0s cubic-bezier(.5, 0, .5, 1);
+  }
+
+
+
+  
+  input:focus {
+    outline: none;
+    box-shadow :0px 0px 0px 8px rgba(95, 17, 232, 0.3)    
+  }
+  
+  /* --------------------- */

@@ -31,6 +31,13 @@
   border-radius: 2rem 0 0 2rem;
 }
 
+#game {
+  background: black;
+  border-style: solid;
+  padding: 50px;
+  border-radius: 10px;
+}
+
 .choice-text {
   padding: 1.5rem;
   width: 100%;
@@ -224,6 +231,12 @@
   color: #08FF08;
 }
 
+body {
+  background: url(/assets/Background_Stars.jpg);
+  width: 100%;
+  height: 100vh;
+}
+
 h1,
 h2,
 h3,
@@ -270,6 +283,12 @@ h3 {
   padding: 2rem;
 }
 
+#end {
+  border-style: solid;
+  border-radius: 25px;
+  background-color: black;
+}
+
 .container > * {
   width: 100%;
 }
@@ -311,6 +330,7 @@ h3 {
 .btn {
   font-size: 1.7rem;
   padding: 1rem 0;
+  margin: 2rem;
   width: 20rem;
   text-align: center;
   border: 0.1rem solid #08FF08;
@@ -330,7 +350,6 @@ h3 {
   transition: -webkit-transform 150ms;
   transition: transform 150ms;
   transition: transform 150ms, -webkit-transform 150ms;
-  border: 0.2rem solid #08FF08;
   background-color: #485461;
 }
 
@@ -384,5 +403,128 @@ input::-ms-input-placeholder {
 
 input::placeholder {
   color: #08FF08;
+}
+
+#box__planet {
+  width: 1000px;
+  height: 1000px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #e0e0e0;
+  -webkit-box-shadow: -5px -5px 100px #5a5a5a, 5px 5px 50px #ffffff;
+          box-shadow: -5px -5px 100px #5a5a5a, 5px 5px 50px #ffffff;
+}
+
+#shadow_planet {
+  width: 1000px;
+  height: 1000px;
+  margin-top: -1000px;
+  position: relative;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 1px 0px 100px 50px #000;
+          box-shadow: inset 1px 0px 100px 50px #000;
+  overflow: hidden;
+}
+
+#box__planet img {
+  margin-top: 0;
+  padding-top: 0;
+  height: 99.5%;
+  -webkit-animation: spin 30s linear infinite;
+          animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    margin-left: -800px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+.questions__container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 50rem;
+  height: 70rem;
+  background-color: white;
+  border-radius: 20px;
+  background: black;
+  border-style: solid;
+  -webkit-box-shadow: -5px -5px 50px black, 5px 5px 50px black;
+          box-shadow: -5px -5px 50px black, 5px 5px 50px black;
+}
+
+.questions__container .globe__quiz__image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20rem;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  -webkit-filter: drop-shadow(0 10px 10px black);
+          filter: drop-shadow(0 10px 10px black);
+}
+
+.questions__container .title__questions1 {
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 2px #969696;
+}
+
+.questions__container .title__questions {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 2px #969696;
+  padding-bottom: 10px;
+}
+
+.questions__container #input {
+  text-align: center;
+  width: 25rem;
+  height: 2.5rem;
+  border-radius: 25px;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #5a5a5a;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.questions__container #input:hover {
+  -webkit-box-shadow: 1px 1px 5px #3829e0, 0px 0px 5px #3829e0;
+          box-shadow: 1px 1px 5px #3829e0, 0px 0px 5px #3829e0;
+}
+
+.questions__container form button {
+  background-color: #3829e0;
+  width: 10rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
+  height: 3rem;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-weight: 800;
+  font-family: 'Red Hat Display', sans-serif;
+  margin-top: 50px;
+  -webkit-box-shadow: 1px 1px 5px #3829e0, 0px 0px 5px #3829e0;
+          box-shadow: 1px 1px 5px #3829e0, 0px 0px 5px #3829e0;
 }
 /*# sourceMappingURL=styles.css.map */

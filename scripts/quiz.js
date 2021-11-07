@@ -137,3 +137,9 @@ incrementScore = (num) => {
 // displayAnswer = (answer) => {
 //   displayCorrectAnswer.innerText = `<p>The correct answer is : ${answer}</p>>`
 // }
+
+
+
+
+
+//! Possible CSS assistance to create duration
