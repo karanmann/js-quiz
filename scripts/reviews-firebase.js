@@ -22,9 +22,9 @@ const db = getFirestore(app);
 
 //Add to firebase
 async function addReview() {
-  var review = readInput("review");
-  var name = readInput("name");
-  var email = readInput("email");
+  let review = readInput("review");
+  let name = readInput("name");
+  let email = readInput("email");
 
   if (!name || !email || !review) return null;
   try {
@@ -85,7 +85,7 @@ function addEventListener() {
 }
 
 async function displayReviewsInList(id) {
-  var reviewsInDb = await getReviews();
+  let reviewsInDb = await getReviews();
   clearContentOfElement(id);
 
   reviewsInDb.forEach((doc) => {
