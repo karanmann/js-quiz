@@ -3,6 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url('../assets/Background_Stars.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #review{
   width: 100%;

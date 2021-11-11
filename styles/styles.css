@@ -144,6 +144,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: url("../assets/Background_Stars.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #review {
@@ -243,9 +248,12 @@
 }
 
 body {
-  background: url(/assets/Background_Stars.jpg);
-  width: 100%;
+  background: url("../assets/Background_Stars.jpg");
+  width: 100vw;
   height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1,
@@ -427,8 +435,8 @@ input::placeholder {
   overflow: hidden;
   border-radius: 50%;
   background: #e0e0e0;
-  -webkit-box-shadow: -5px -5px 100px #5a5a5a, 5px 5px 50px #ffffff;
-          box-shadow: -5px -5px 100px #5a5a5a, 5px 5px 50px #ffffff;
+  -webkit-box-shadow: -5px -5px 100px #5a5a5a, 5px 5px 50px #ffffff;
+          box-shadow: -5px -5px 100px #5a5a5a, 5px 5px 50px #ffffff;
 }
 
 #shadow_planet {
@@ -471,8 +479,8 @@ input::placeholder {
   border-radius: 20px;
   background: black;
   border-style: solid;
-  -webkit-box-shadow: -5px -5px 50px black, 5px 5px 50px black;
-          box-shadow: -5px -5px 50px black, 5px 5px 50px black;
+  -webkit-box-shadow: -5px -5px 50px black, 5px 5px 50px black;
+          box-shadow: -5px -5px 50px black, 5px 5px 50px black;
 }
 
 .questions__container .globe__quiz__image {
