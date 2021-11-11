@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="../styles/stylesT.css" rel="stylesheet">
-  <script defer src="../scripts/quizT.js"></script>
-  <title>Quiz App</title>
-</head>
-<body onload="startGame()">
-      
-  <div class="container">
-
-    <div id="question-container" class="hide">
-      <div style="font-size: 1.2rem; text-align: center; background-color: cornflowerblue;">
-        Your Score : <span id="Score">0</span>
-      </div>
-      <form  class="row" id="quizForm">
-        <!-- <div class="col" id="numberOfQuestion">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="../styles/stylesT.css" rel="stylesheet" />
+    <script defer src="../scripts/quizT.js"></script>
+    <title>Quiz App</title>
+  </head>
+  <body onload="startGame()">
+    <div class="container">
+      <div id="question-container" class="hide">
+        <div
+          style="
+            font-size: 1.2rem;
+            text-align: center;
+            background-color: cornflowerblue;
+          "
+        >
+          Your Score : <span id="Score">0</span>
+        </div>
+        <form class="row" id="quizForm">
+          <!-- <div class="col" id="numberOfQuestion">
             <div class="bolt"> 
             <div class="number">${i}</div>
             <div class="dash"></div>
             </div>
         </div> -->
-      </form>
-      <div id="question">Question</div>
-      <div id="answer-buttons" class="btn-grid">
-        <button class="btn">Answer 1</button>
-        <button class="btn">Answer 2</button>
-        <button class="btn">Answer 3</button>
-        <button class="btn">Answer 4</button>
+        </form>
+        <div id="question">Question</div>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="start-btn" class="start-btn btn hide">Start</button>
+        <button id="next-btn" class="next-btn btn hide">Next</button>
       </div>
     </div>
-    <div class="controls">
-      <button id="start-btn" class="start-btn btn hide">Start</button>
-      <button id="next-btn" class="next-btn btn hide">Next</button>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
